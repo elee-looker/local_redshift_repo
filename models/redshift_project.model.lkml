@@ -81,3 +81,13 @@ explore: table_b {
 }
 
 explore: users {}
+
+explore: joined_pdts {
+  view_name: pdt_tester1
+  join: pdt_tester2 {
+    relationship: one_to_one
+    sql_on: ${pdt_tester2.id} = ${pdt_tester1.id} ;;
+  }
+}
+
+explore: pdt_tester3 {}
